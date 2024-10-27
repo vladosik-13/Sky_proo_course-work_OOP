@@ -4,7 +4,7 @@ from abc import ABC, abstractmethod
 import requests
 
 from config import DATA_DIR
-from src.vacancy import Vacanсy
+from src.vacancy import Vacancy
 
 
 class Parser(ABC):
@@ -76,7 +76,7 @@ class HH(Parser):
                 area = "Не указано."
 
             self.vacancies_short.append(
-                Vacanсy(
+                Vacancy(
                     title=title, link=link, description=description, requirement=requirement, salary=salary, area=area
                 )
             )
