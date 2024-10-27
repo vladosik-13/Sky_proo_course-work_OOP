@@ -18,6 +18,7 @@ class Parser(ABC):
     def export_vac_list(self):
         pass
 
+
 class HH(Parser):
     """Класс для работы с API сервиса HeadHunter.
     Получает список вакансий по ключевому слову."""
@@ -75,7 +76,7 @@ class HH(Parser):
                 area = "Не указано."
 
             self.vacancies_short.append(
-                Vacansy(
+                Vacanсy(
                     title=title, link=link, description=description, requirement=requirement, salary=salary, area=area
                 )
             )
