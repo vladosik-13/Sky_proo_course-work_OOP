@@ -52,16 +52,16 @@ class VacancyList:
         принимая данные в виде словаря с описанием вакансии, объекта вакнсии, списка словарей,
         либо списка объектов вакансий."""
         if isinstance(vacansy, dict):
-            new_vacansy = Vacancy(**vacansy)
+            new_vacansy = Vacansy(**vacansy)
             self.vacs_list.append(new_vacansy)
-        elif isinstance(vacansy, Vacancy):
+        elif isinstance(vacansy, Vacansy):
             self.vacs_list.append(vacansy)
         elif isinstance(vacansy, list) or isinstance(vacansy, tuple):
             for item in vacansy:
                 if isinstance(item, dict):
-                    new_vacancy = Vacancy(**item)
-                    self.vacs_list.append(new_vacancy)
-                elif isinstance(item, Vacancy):
+                    new_vacansy = Vacansy(**item)
+                    self.vacs_list.append(new_vacansy)
+                elif isinstance(item, Vacansy):
                     self.vacs_list.append(item)
 
     def del_vacancy(self, number: int) -> None:

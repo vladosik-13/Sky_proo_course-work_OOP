@@ -56,16 +56,16 @@ def main_func():
 
     # Передаём обработанный список для отображения топа вакансий и записи в файл.
 
-    vacs_list = VacanсyList()
-    vacs_list.import_vacansy_list(temp_vacs_list)
+    vacs_list = VacancyList()
+    vacs_list.import_vacancy_list(temp_vacs_list)
 
     top_n = int(input("Введите сколько топ-вакансий по зарплате Вам показать: "))
     print(f"Вывожу топ-{top_n} вакансий.\n")
     print(vacs_list.top_vacs(top_n))
 
     # Производим запись списка вакансий в файл
-    vacs_file = VacanсyFile()
-    vacs_file.import_vacansy_list(temp_vacs_list)
+    vacs_file = VacancyFile()
+    vacs_file.import_vacancy_list(temp_vacs_list)
     vacs_file.write_file()
     print(f"Список из {len(temp_vacs_list)} вакансий успешно записан в файл!")
 
