@@ -38,7 +38,7 @@ def main_func():
 
     # Обрабатываем список вакансий согласно запрошенных слов.
 
-    v_filter = VacanсyFilter()
+    v_filter = VacancyFilter()
     v_filter.vacs = temp_vacs_list
     v_filter.filter_requirement(req_word)
     print("Вакансии отфильтрованы по требованиям.")
