@@ -1,6 +1,5 @@
 import json
 import pytest
-import os
 from unittest.mock import patch, mock_open
 from src.vacancy import Vacancy
 from src.file import VacancyFile
