@@ -47,21 +47,21 @@ class VacancyList:
         link = f"ссылка - {item.link}"
         return f"{title}, {salary}, {area}, {description}, {requirement}, {link}"
 
-    def add_vacancy(self, vacansy: any) -> None:
+    def add_vacancy(self, vacancy: any) -> None:
         """Метод добавляет объект вакансии в список вакансий,
         принимая данные в виде словаря с описанием вакансии, объекта вакнсии, списка словарей,
         либо списка объектов вакансий."""
-        if isinstance(vacansy, dict):
-            new_vacansy = Vacansy(**vacansy)
-            self.vacs_list.append(new_vacansy)
-        elif isinstance(vacansy, Vacansy):
-            self.vacs_list.append(vacansy)
-        elif isinstance(vacansy, list) or isinstance(vacansy, tuple):
-            for item in vacansy:
+        if isinstance(vacancy, dict):
+            new_vacancy = Vacancy(**vacancy)
+            self.vacs_list.append(new_vacancy)
+        elif isinstance(vacancy, Vacancy):
+            self.vacs_list.append(vacancy)
+        elif isinstance(vacancy, list) or isinstance(vacancy, tuple):
+            for item in vacancy:
                 if isinstance(item, dict):
-                    new_vacansy = Vacansy(**item)
+                    new_vacansy = Vacancy(**item)
                     self.vacs_list.append(new_vacansy)
-                elif isinstance(item, Vacansy):
+                elif isinstance(item, Vacancy):
                     self.vacs_list.append(item)
 
     def del_vacancy(self, number: int) -> None:

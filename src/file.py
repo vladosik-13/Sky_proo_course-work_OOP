@@ -18,11 +18,11 @@ class ReadWriteFile(ABC):
         pass
 
     @abstractmethod
-    def export_vacanсy_list(self):
+    def export_vacancy_list(self):
         pass
 
     @abstractmethod
-    def import_vacanсy_list(self):
+    def import_vacancy_list(self):
         pass
 
 
