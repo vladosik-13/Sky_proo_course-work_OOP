@@ -1,5 +1,4 @@
 import pytest
-from src.vacancy import Vacancy
 from src.list import VacancyList
 
 
